@@ -1,4 +1,4 @@
-import { H1, H3, P, Stack, Link } from 'newskit';
+import { H1, H2, H3, P, Stack, Link } from 'newskit';
 import Template from '../components/template';
 import { pageTitle as page1Title } from './page1';
 import { pageTitle as page2Title } from './page2';
@@ -9,9 +9,12 @@ import { pageTitle as page6Title } from './page6';
 import { pageTitle as page7Title } from './page7';
 import { pageTitle as page8Title } from './page8';
 
+import { dependencies } from '../package.json';
+
 export default () => (
   <Template>
     <H1>NewsKit Demo</H1>
+    <H2>v{dependencies.newskit}</H2>
     <hr />
     <H3 as="div">
       <Stack space="sizing030">

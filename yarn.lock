@@ -3645,11 +3645,6 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash.get@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
-  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
-
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -3945,10 +3940,10 @@ neo-async@2.6.1, neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-newskit@0.0.0-951046825:
-  version "0.0.0-951046825"
-  resolved "https://registry.yarnpkg.com/newskit/-/newskit-0.0.0-951046825.tgz#a41be2113efdf07b4ca81f3ec8c4e0cfec06edda"
-  integrity sha512-rlmaeiWVSvLn4nqZThlDm8aaNy+BlxARrVj1AkKvWgS1O+PzqyyfmWSUrWzEc8M2ReuZEms2fO4HqEH4taAU8g==
+newskit@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/newskit/-/newskit-0.18.0.tgz#ec02e7853d2893bbd9eb565597a2072dad452859"
+  integrity sha512-nxwgDmtJSzCKy6Wu8OOpualMHVfhwS5lTuQVNIRa5+GyJzA7cT3NNNnrSoa89MOdgUPdGmsd01tD1aF4OTsuog==
   dependencies:
     "@emotion/core" "^10.0.28"
     "@emotion/styled" "^10.0.27"
@@ -3957,7 +3952,6 @@ newskit@0.0.0-951046825:
     dotenv "^8.0.0"
     emotion "^10.0.27"
     emotion-theming "^10.0.27"
-    lodash.get "^4.4.2"
     react-range "^1.5.3"
 
 next-tick@~1.0.0:

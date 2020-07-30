@@ -1,26 +1,33 @@
-import { Block, Stack, Button, SkipNext, ThemeProvider } from 'newskit';
-import { TextBlock } from '../../components/coming-soon-in-newskit';
+import {
+  Block,
+  Stack,
+  Button,
+  SkipNext,
+  TextBlock,
+  ThemeProvider,
+  styled,
+} from 'newskit';
 import page4Theme from './page4-theme';
 
 export default () => (
   <ThemeProvider theme={page4Theme}>
     <div>
-      <Block margin="spaceStack040">
+      <Block overrides={{ spaceStack: 'space040' }}>
         <TextBlock as="h2" overrides={{ typePreset: 'heading050' }}>
           Standard Digital
         </TextBlock>
       </Block>
-      <Block margin="spaceStack050">
+      <Block overrides={{ spaceStack: 'space050' }}>
         <TextBlock overrides={{ typePreset: 'body010' }}>
           For those who want to read The Times &amp; The Sunday Times on the go.
         </TextBlock>
       </Block>
-      <Block margin="spaceStack030">
+      <Block overrides={{ spaceStack: 'space030' }}>
         <TextBlock as="h3" overrides={{ typePreset: 'heading050' }}>
           £15.00
         </TextBlock>
       </Block>
-      <Block margin="spaceStack040">
+      <Block overrides={{ spaceStack: 'space040' }}>
         <TextBlock overrides={{ typePreset: 'label030' }}>
           a month, monthly rolling contract.
         </TextBlock>

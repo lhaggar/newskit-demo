@@ -1,16 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { ThemeProvider, Global, css, createTheme } from 'newskit';
-
-const theme = createTheme('demo-theme', {
-  themeOverrider: () => ({
-    defaultPresets: {
-      textBlock: {
-        typePreset: 'body010',
-      },
-    },
-  }),
-});
+import { ThemeProvider, Global, css, newskitLightTheme } from 'newskit';
 
 export default ({ title = 'NewsKit Demo', children }) => (
   <div>
@@ -37,6 +27,6 @@ export default ({ title = 'NewsKit Demo', children }) => (
         }
       `}
     />
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <ThemeProvider theme={newskitLightTheme}>{children}</ThemeProvider>
   </div>
 );

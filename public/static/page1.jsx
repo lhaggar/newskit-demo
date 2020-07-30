@@ -1,5 +1,4 @@
-import { Button, SkipNext } from 'newskit';
-import { TextBlock } from '../../components/coming-soon-in-newskit';
+import { Button, SkipNext, TextBlock } from 'newskit';
 
 export default () => (
   <div>

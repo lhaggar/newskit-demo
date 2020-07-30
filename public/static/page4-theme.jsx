@@ -7,12 +7,24 @@ export default createTheme('page4-theme', {
   fontOverrides: {
     fontFamily1: {
       fontFamily: 'TimesDigitalRegular',
+      cropConfig: {
+        top: 9,
+        bottom: 12,
+      },
     },
     fontFamily2: {
       fontFamily: 'TimesModernBold',
+      cropConfig: {
+        top: 7,
+        bottom: 12,
+      },
     },
     fontFamily3: {
       fontFamily: 'GillSansMTStdMedium',
+      cropConfig: {
+        top: 5,
+        bottom: 14,
+      },
     },
   },
   // Overriding at this end stage will only affect these specific presets.

@@ -1,11 +1,17 @@
-import { Block, Stack, Button, SkipNext, ThemeProvider } from 'newskit';
-import { TextBlock } from '../../components/coming-soon-in-newskit';
+import {
+  Block,
+  Stack,
+  Button,
+  SkipNext,
+  TextBlock,
+  ThemeProvider,
+} from 'newskit';
 import page7Theme from './page7-theme';
 
 export default () => (
   <ThemeProvider theme={page7Theme}>
     <div>
-      <Block margin="spaceStack040">
+      <Block overrides={{ spaceStack: 'space040' }}>
         <TextBlock
           as="h2"
           overrides={{ typePreset: 'heading050', stylePreset: 'contrastText' }}
@@ -13,14 +19,14 @@ export default () => (
           Standard Digital
         </TextBlock>
       </Block>
-      <Block margin="spaceStack050">
+      <Block overrides={{ spaceStack: 'space050' }}>
         <TextBlock
           overrides={{ typePreset: 'body010', stylePreset: 'subtleText' }}
         >
           For those who want to read The Times &amp; The Sunday Times on the go.
         </TextBlock>
       </Block>
-      <Block margin="spaceStack030">
+      <Block overrides={{ spaceStack: 'space030' }}>
         <TextBlock
           as="h3"
           overrides={{ typePreset: 'heading050', stylePreset: 'contrastText' }}
@@ -28,7 +34,7 @@ export default () => (
           £15.00
         </TextBlock>
       </Block>
-      <Block margin="spaceStack040">
+      <Block overrides={{ spaceStack: 'space040' }}>
         <TextBlock
           overrides={{ typePreset: 'label030', stylePreset: 'subtleText' }}
         >
@@ -36,8 +42,10 @@ export default () => (
         </TextBlock>
       </Block>
       <Stack flow="horizontal-center" stackDistribution="flex-start">
-        <Button stylePreset="buttonOutlinedPrimary">Subscribe</Button>
-        <Button stylePreset="buttonMinimalPrimary">
+        <Button overrides={{ stylePreset: 'buttonOutlinedPrimary' }}>
+          Subscribe
+        </Button>
+        <Button overrides={{ stylePreset: 'buttonMinimalPrimary' }}>
           View Benefits <SkipNext />
         </Button>
       </Stack>

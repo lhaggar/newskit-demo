@@ -15,14 +15,14 @@ export default () => (
     <hr />
     <H3 as="div">
       <Stack space="sizing030">
-        <Link href="page1">{page1Title}</Link>
-        <Link href="page2">{page2Title}</Link>
-        <Link href="page3">{page3Title}</Link>
-        <Link href="page4">{page4Title}</Link>
-        <Link href="page5">{page5Title}</Link>
-        <Link href="page6">{page6Title}</Link>
-        <Link href="page7">{page7Title}</Link>
-        <Link href="page8">{page8Title}</Link>
+        <Link href="/page1">{page1Title}</Link>
+        <Link href="/page2">{page2Title}</Link>
+        <Link href="/page3">{page3Title}</Link>
+        <Link href="/page4">{page4Title}</Link>
+        <Link href="/page5">{page5Title}</Link>
+        <Link href="/page6">{page6Title}</Link>
+        <Link href="/page7">{page7Title}</Link>
+        <Link href="/page8">{page8Title}</Link>
       </Stack>
     </H3>
     <hr />

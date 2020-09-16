@@ -16,7 +16,7 @@ export const Code = ({ language = 'jsx', children }) => {
           overflow: 'auto',
           padding: '1em',
           margin: 0,
-          borderRadius: theme.borderRadius.borderRadiusRounded010,
+          borderRadius: theme.borders.borderRadiusRounded010,
         }}
       >
         {children}

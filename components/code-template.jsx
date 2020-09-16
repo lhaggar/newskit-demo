@@ -2,6 +2,7 @@ import { CodeFromFile } from './code';
 import Template from './template';
 import {
   Stack,
+  Block,
   Heading2,
   Tag,
   Grid,
@@ -28,10 +29,16 @@ const Container = styled.div`
 export default ({ PageComponent, codePaths, title, nextPage }) => (
   <Template title={title}>
     <Stack flow="horizontal-center" stackDistribution="space-between">
-      <Heading2>{title}</Heading2>
-      {nextPage && (
+      <Block overrides={{ paddingPreset: 'spaceInset020Stretch' }}>
+        <Heading2>{title}</Heading2>
+      </Block>
+      {nextPage ? (
         <Tag href={`/${nextPage}`} size="large">
           Next Step 👉
+        </Tag>
+      ) : (
+        <Tag href="/" size="large">
+          Home 🏡
         </Tag>
       )}
     </Stack>

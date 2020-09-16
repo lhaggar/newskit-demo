@@ -3940,10 +3940,10 @@ neo-async@2.6.1, neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-newskit@0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/newskit/-/newskit-0.18.0.tgz#ec02e7853d2893bbd9eb565597a2072dad452859"
-  integrity sha512-nxwgDmtJSzCKy6Wu8OOpualMHVfhwS5lTuQVNIRa5+GyJzA7cT3NNNnrSoa89MOdgUPdGmsd01tD1aF4OTsuog==
+newskit@^0.0.0-ceda5b88f:
+  version "0.0.0-ceda5b88f"
+  resolved "https://registry.yarnpkg.com/newskit/-/newskit-0.0.0-ceda5b88f.tgz#81ca8f92152999a9c25f8761b5d31291eb730575"
+  integrity sha512-iEXEsvmmYRgDSu5mF5NQkn5QyDXhnTyuy5N6yU6yuQIzTkyfEspMG7p+agJZ7Hrpfl4Tu7eFWZYtiAilYhShmA==
   dependencies:
     "@emotion/core" "^10.0.28"
     "@emotion/styled" "^10.0.27"
@@ -4738,10 +4738,10 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
-prettier@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
-  integrity sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
+prettier@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.1.tgz#d9485dd5e499daa6cb547023b87a6cf51bee37d6"
+  integrity sha512-9bY+5ZWCfqj3ghYBLxApy2zf6m+NJo5GzmLTpr9FsApsfjriNnS2dahWReHMi7qNPhhHl9SYHJs2cHZLgexNIw==
 
 prismjs@^1.8.4:
   version "1.20.0"

@@ -1,4 +1,4 @@
-import { H1, H2, H3, P, Stack, Link } from 'newskit';
+import { Block, H1, H2, H3, P, Stack, Link, Divider } from 'newskit';
 import Template from '../components/template';
 import { pageTitle as page1Title } from './page1';
 import { pageTitle as page2Title } from './page2';
@@ -13,22 +13,32 @@ import { dependencies } from '../package.json';
 
 export default () => (
   <Template>
-    <H1>NewsKit Demo</H1>
-    <H2>v{dependencies.newskit}</H2>
-    <hr />
+    <Block overrides={{ spaceStack: 'space060' }}>
+      <H1>NewsKit Demo</H1>
+    </Block>
+    <Block overrides={{ spaceStack: 'space050' }}>
+      <H2>v{dependencies.newskit}</H2>
+    </Block>
+    <Block overrides={{ spaceStack: 'space040' }}>
+      <Divider />
+    </Block>
     <H3 as="div">
-      <Stack space="sizing030">
-        <Link href="/page1">{page1Title}</Link>
-        <Link href="/page2">{page2Title}</Link>
-        <Link href="/page3">{page3Title}</Link>
-        <Link href="/page4">{page4Title}</Link>
-        <Link href="/page5">{page5Title}</Link>
-        <Link href="/page6">{page6Title}</Link>
-        <Link href="/page7">{page7Title}</Link>
-        <Link href="/page8">{page8Title}</Link>
-      </Stack>
+      <Block overrides={{ spaceStack: 'space050' }}>
+        <Stack space="sizing030">
+          <Link href="/page1">{page1Title}</Link>
+          <Link href="/page2">{page2Title}</Link>
+          <Link href="/page3">{page3Title}</Link>
+          <Link href="/page4">{page4Title}</Link>
+          <Link href="/page5">{page5Title}</Link>
+          <Link href="/page6">{page6Title}</Link>
+          <Link href="/page7">{page7Title}</Link>
+          <Link href="/page8">{page8Title}</Link>
+        </Stack>
+      </Block>
     </H3>
-    <hr />
+    <Block overrides={{ spaceStack: 'space050' }}>
+      <Divider />
+    </Block>
     <footer>
       <P>
         <Link href="https://newskit.co.uk/">newskit.co.uk</Link>

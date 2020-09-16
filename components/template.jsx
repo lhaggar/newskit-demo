@@ -25,6 +25,11 @@ export default ({ title = 'NewsKit Demo', children }) => (
           src: url('/fonts/GillSansMTStd-Medium.woff2') format('woff2');
           font-style: normal;
         }
+
+        body {
+          margin: 0;
+          padding: 0;
+        }
       `}
     />
     <ThemeProvider theme={newskitLightTheme}>{children}</ThemeProvider>

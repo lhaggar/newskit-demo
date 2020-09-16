@@ -8,13 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "newskit": "0.18.0",
+    "newskit": "^0.0.0-ceda5b88f",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-syntax-highlighter": "^12.2.1"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.1"
   }
 }

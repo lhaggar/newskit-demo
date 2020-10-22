@@ -1,6 +1,6 @@
 ## Getting Started
 
-This is a demonstration of the WIP NewsKit v0.16.0 component library. It has 8 demonstration pages which build up an example component.
+This is a demonstration of the WIP NewsKit component library. It features demonstration pages which build up an example component, then place that in a full page example.
 
 ### Dev Server
 

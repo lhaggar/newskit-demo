@@ -8,7 +8,6 @@ export const Code = ({ language = 'jsx', children }) => {
   return (
     <div>
       <SyntaxHighlighter
-        data-testid="sample-code"
         tabIndex={0}
         language={language}
         // style={coy}

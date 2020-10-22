@@ -1,4 +1,4 @@
-import { Button, SkipNext, TextBlock } from 'newskit';
+import { Button, IconFilledExpandMore, TextBlock } from 'newskit';
 
 export default () => (
   <div>
@@ -10,7 +10,7 @@ export default () => (
     <TextBlock>a month, monthly rolling contract.</TextBlock>
     <Button>Subscribe</Button>
     <Button>
-      View Benefits <SkipNext />
+      View Benefits <IconFilledExpandMore />
     </Button>
   </div>
 );

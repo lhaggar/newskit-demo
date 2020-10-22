@@ -19,7 +19,7 @@ import {
 import CodeTemplate from '../components/code-template';
 import Page6 from '../public/static/page6';
 
-export const pageTitle = 'Full Page Example';
+export const pageTitle = 'Step 7: Full Page Example';
 
 const cards = [
   'EF476F/FFFFFF',

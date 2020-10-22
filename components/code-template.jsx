@@ -2,57 +2,89 @@ import { CodeFromFile } from './code';
 import Template from './template';
 import {
   Stack,
+  Block,
   Heading2,
   Tag,
   Grid,
   Cell,
   styled,
-  getColorFromTheme,
   getBorderRadiusFromTheme,
-  getSizingFromTheme,
-  Scroll,
+  getSpacingFromTheme,
+  getSpacingInsetFromTheme,
 } from 'newskit';
+import useThemeSwitcher from './use-theme-switcher';
 
 const HR = styled.hr`
-  margin-bottom: ${getSizingFromTheme('sizing060')};
+  margin-top: 0;
+  margin-bottom: ${getSpacingFromTheme('space050')};
 `;
 
 const Container = styled.div`
-  background: ${getColorFromTheme('interface020', 'background')};
   border-radius: ${getBorderRadiusFromTheme('borderRadiusRounded010')};
-  height: 80vh;
-  overflow-x: auto;
-  overflow-y: auto;
+  ${getSpacingInsetFromTheme('spaceInset020')};
+  overflow: hidden;
 `;
 
-export default ({ PageComponent, codePaths, title, nextPage }) => (
-  <Template title={title}>
-    <Stack flow="horizontal-center" stackDistribution="space-between">
-      <Heading2>{title}</Heading2>
-      {nextPage && (
-        <Tag href={`/${nextPage}`} size="large">
-          Next Step 👉
-        </Tag>
-      )}
-    </Stack>
-    <HR />
+export default ({
+  PageComponent,
+  codePaths,
+  title,
+  nextPage,
+  showThemeSwitcher,
+}) => {
+  const hasCode = Boolean(codePaths && codePaths.length);
+  const [themeSwitcher, ThemeWrapper] = useThemeSwitcher();
+
+  const Content = () => (
     <Grid>
-      <Cell xs={12} md={6}>
+      <Cell xs={12} md={hasCode ? 6 : 12}>
         <Container>
           <Stack flow="horizontal-top" stackDistribution="center">
             <PageComponent />
           </Stack>
         </Container>
       </Cell>
-      <Cell xsHidden smHidden md={6}>
-        <Container>
-          <Stack space="sizing030">
-            {codePaths.map((path) => (
-              <CodeFromFile path={path} />
-            ))}
-          </Stack>
-        </Container>
-      </Cell>
+      {hasCode && (
+        <Cell xsHidden smHidden md={6}>
+          <Container>
+            <Stack space="sizing030">
+              {codePaths.map((path) => (
+                <CodeFromFile path={path} />
+              ))}
+            </Stack>
+          </Container>
+        </Cell>
+      )}
     </Grid>
-  </Template>
-);
+  );
+
+  return (
+    <Template title={title}>
+      <Block overrides={{ spaceInset: 'spaceInsetStretch020' }}>
+        <Stack flow="horizontal-center" stackDistribution="space-between">
+          <Block overrides={{ soaceInset: 'spaceInsetStretch020' }}>
+            <Heading2>{title}</Heading2>
+          </Block>
+          {showThemeSwitcher && themeSwitcher}
+          {nextPage ? (
+            <Tag href={`/${nextPage}`} size="large">
+              Next Step 👉
+            </Tag>
+          ) : (
+            <Tag href="/" size="large">
+              Home 🏡
+            </Tag>
+          )}
+        </Stack>
+      </Block>
+      <HR />
+      {showThemeSwitcher ? (
+        <ThemeWrapper>
+          <Content />
+        </ThemeWrapper>
+      ) : (
+        <Content />
+      )}
+    </Template>
+  );
+};

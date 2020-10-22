@@ -8,7 +8,6 @@ export const Code = ({ language = 'jsx', children }) => {
   return (
     <div>
       <SyntaxHighlighter
-        data-testid="sample-code"
         tabIndex={0}
         language={language}
         // style={coy}
@@ -16,7 +15,7 @@ export const Code = ({ language = 'jsx', children }) => {
           overflow: 'auto',
           padding: '1em',
           margin: 0,
-          borderRadius: theme.borderRadius.borderRadiusRounded010,
+          borderRadius: theme.borders.borderRadiusRounded010,
         }}
       >
         {children}

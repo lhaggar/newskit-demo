@@ -935,10 +935,25 @@
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-transform-typescript" "^7.9.0"
 
+"@babel/runtime-corejs3@^7.11.2":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.12.1.tgz#51b9092befbeeed938335a109dbe0df51451e9dc"
+  integrity sha512-umhPIcMrlBZ2aTWlWjUseW9LjQKxi1dpFlQS8DzsxB//5K+u6GLTC/JliPKHsd5kJVPIU6X/Hy0YvWOYPcMxBw==
+  dependencies:
+    core-js-pure "^3.0.0"
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@7.9.6":
   version "7.9.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
   integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.10.5":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.1.tgz#b4116a6b6711d010b2dad3b7b6e43bf1b9954740"
+  integrity sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1000,6 +1015,30 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@emotion-icons/emotion-icon@2.0.3", "@emotion-icons/emotion-icon@^2.0.2":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@emotion-icons/emotion-icon/-/emotion-icon-2.0.3.tgz#fa238c965abc62e91d20072ff61011d2044b779a"
+  integrity sha512-BYb0y+IMNXN3rePtubBC86QUir1h1ou+khxFz+HWW7rPfeCGJ72J/xyeTxuWcSe93FHt67V/ppHv2/OOBa61mg==
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    "@emotion/is-prop-valid" "^0.8.7"
+
+"@emotion-icons/material-outlined@^2.9.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@emotion-icons/material-outlined/-/material-outlined-2.10.0.tgz#018a4f2a8149cfe55a16b52d6b5b2ce32024b077"
+  integrity sha512-tvxUOCAMBvHGohvGrsSt5yzZgGRjE10R5v/bHsxHdxq8wEUsB92iIbTDP42jdLBw+/RMrXqBrFnLG3uu9bUFig==
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    "@emotion-icons/emotion-icon" "2.0.3"
+
+"@emotion-icons/material@^2.9.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@emotion-icons/material/-/material-2.10.0.tgz#70a19d01256601ef21fa5516e4be55df2ad1d834"
+  integrity sha512-V2uvFRLalnIgqTIjrECXORSefN6t+LxFmn1YKvnPHGqR74Rcr/9fafWmRsIZzqBHSMPM+mJ/UZzvUJ8CH3iWVA==
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    "@emotion-icons/emotion-icon" "2.0.3"
+
 "@emotion/cache@^10.0.27":
   version "10.0.29"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
@@ -1036,7 +1075,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
   integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
 
-"@emotion/is-prop-valid@0.8.8":
+"@emotion/is-prop-valid@0.8.8", "@emotion/is-prop-valid@^0.8.7":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
   integrity sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==
@@ -1630,7 +1669,7 @@ braces@^2.3.1, braces@^2.3.2:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-braces@~3.0.2:
+braces@^3.0.1, braces@~3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/braces/-/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
   integrity sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
@@ -2126,6 +2165,11 @@ core-js-compat@^3.6.2:
   dependencies:
     browserslist "^4.8.5"
     semver "7.0.0"
+
+core-js-pure@^3.0.0:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.6.5.tgz#c79e75f5e38dbc85a662d91eea52b8256d53b813"
+  integrity sha512-lacdXOimsiD0QyNf9BC/mxivNJ/ybBGJXQFKzRekp1WTHoVUWsUHEn+2T8GJAzzIhyOuXA+gOxCVN3l+5PLPUA==
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -3778,6 +3822,14 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
+micromatch@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.2.tgz#4fcb0999bf9fbc2fcbdd212f6d629b9a56c39259"
+  integrity sha512-y7FpHSbMUMoyPbYUSzO6PaZ6FyRnQOpHuKwbo1G+Knck95XVU4QAiKdGEnj5wwoS7PlOgthX/09u5iFJ+aYf5Q==
+  dependencies:
+    braces "^3.0.1"
+    picomatch "^2.0.5"
+
 miller-rabin@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
@@ -3940,11 +3992,15 @@ neo-async@2.6.1, neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-newskit@0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/newskit/-/newskit-0.18.0.tgz#ec02e7853d2893bbd9eb565597a2072dad452859"
-  integrity sha512-nxwgDmtJSzCKy6Wu8OOpualMHVfhwS5lTuQVNIRa5+GyJzA7cT3NNNnrSoa89MOdgUPdGmsd01tD1aF4OTsuog==
+newskit@0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/newskit/-/newskit-0.19.0.tgz#704bdcf4a902967213dd90ffce3c639866ab1cc1"
+  integrity sha512-lhtHZ6wNDEHtW5+vJLuEKbVpdHJ0uRrms5OhBpom8bWaWyHut3p3G4v8DTtOqSDf31IIaloqpxbm9Uh5YDKK+g==
   dependencies:
+    "@babel/runtime-corejs3" "^7.11.2"
+    "@emotion-icons/emotion-icon" "^2.0.2"
+    "@emotion-icons/material" "^2.9.0"
+    "@emotion-icons/material-outlined" "^2.9.0"
     "@emotion/core" "^10.0.28"
     "@emotion/styled" "^10.0.27"
     date-fns "^2.6.0"
@@ -3952,12 +4008,21 @@ newskit@0.18.0:
     dotenv "^8.0.0"
     emotion "^10.0.27"
     emotion-theming "^10.0.27"
+    react-hook-form "^6.8.2"
     react-range "^1.5.3"
 
 next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
+
+next-transpile-modules@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-4.1.0.tgz#b2d4bd29f3d4179014f7615720f360fdeec67ff7"
+  integrity sha512-brb9S2Dq7l01fV0fdZw1pO2cWMu7fFTclIV2nccmX2Jzwtz1c9iScPMqGyWP6/wglOPOColoJlHzOrSG6cnEIQ==
+  dependencies:
+    micromatch "^4.0.2"
+    slash "^3.0.0"
 
 next@9.4.4:
   version "9.4.4"
@@ -4343,7 +4408,7 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-picomatch@^2.0.4, picomatch@^2.2.1:
+picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.2.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
   integrity sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
@@ -4738,10 +4803,10 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
-prettier@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
-  integrity sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
+prettier@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.1.tgz#d9485dd5e499daa6cb547023b87a6cf51bee37d6"
+  integrity sha512-9bY+5ZWCfqj3ghYBLxApy2zf6m+NJo5GzmLTpr9FsApsfjriNnS2dahWReHMi7qNPhhHl9SYHJs2cHZLgexNIw==
 
 prismjs@^1.8.4:
   version "1.20.0"
@@ -4906,6 +4971,11 @@ react-dom@16.13.1:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
+
+react-hook-form@^6.8.2:
+  version "6.9.4"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-6.9.4.tgz#750f4d115f11e53600977f829ea09ba90f9ea99f"
+  integrity sha512-9zD9iKYt6pN6aUxKvJycAmnMGuNmZJzO11V+uOxiQkq/8DncomqROjqdck2u2/wbDYN8/mAFamQmmBaIkn4ziw==
 
 react-is@16.13.1, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
@@ -5292,6 +5362,11 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+slash@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
+  integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

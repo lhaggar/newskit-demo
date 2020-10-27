@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Page should render as expected 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="css-1lecspc"
+    >
+      <div
+        class="css-1r3hoet"
+      >
+        <h1
+          class="css-n6kujm"
+        >
+          NewsKit Demo
+        </h1>
+      </div>
+      <div
+        class="css-q8gelu"
+      >
+        <h2
+          class="css-nyc80i"
+        >
+          v0.19.0
+        </h2>
+      </div>
+      <div
+        class="css-1gojmfd"
+      >
+        <hr
+          aria-hidden="true"
+          class="css-5fsgfa"
+          data-testid="divider"
+        />
+      </div>
+      <div
+        class="css-inp7t"
+      >
+        <div
+          class="css-q8gelu"
+        >
+          <div
+            class="css-vam4yi"
+          >
+            <a
+              class="css-4d291v"
+              href="/page1"
+            >
+              <span
+                class="css-1oeu941"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  Step 1: Basic Components
+                </span>
+              </span>
+            </a>
+            <a
+              class="css-4d291v"
+              href="/page2"
+            >
+              <span
+                class="css-1oeu941"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  Step 2: Setting Type Presets
+                </span>
+              </span>
+            </a>
+            <a
+              class="css-4d291v"
+              href="/page3"
+            >
+              <span
+                class="css-1oeu941"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  Step 3: Layout
+                </span>
+              </span>
+            </a>
+            <a
+              class="css-4d291v"
+              href="/page4"
+            >
+              <span
+                class="css-1oeu941"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  Step 4: Setting Style Presets
+                </span>
+              </span>
+            </a>
+            <a
+              class="css-4d291v"
+              href="/page5"
+            >
+              <span
+                class="css-1oeu941"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  Step 5: Custom Component
+                </span>
+              </span>
+            </a>
+            <a
+              class="css-4d291v"
+              href="/page6"
+            >
+              <span
+                class="css-1oeu941"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  Step 6: Theme
+                </span>
+              </span>
+            </a>
+            <a
+              class="css-4d291v"
+              href="/page7"
+            >
+              <span
+                class="css-1oeu941"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  Step 7: Full Page Example
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-q8gelu"
+      >
+        <hr
+          aria-hidden="true"
+          class="css-5fsgfa"
+          data-testid="divider"
+        />
+      </div>
+      <footer>
+        <p
+          class="css-19yis6s"
+        >
+          <a
+            class="css-4d291v"
+            href="https://newskit.co.uk/"
+          >
+            <span
+              class="css-1togqc2"
+            >
+              <span
+                class="css-10uqmlk"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  newskit.co.uk
+                </span>
+              </span>
+              <span
+                class="css-10uqmlk"
+              >
+                <svg
+                  aria-labelledby="nk-1"
+                  class="css-1suiw6l"
+                  viewBox="0 0 24 24"
+                >
+                  <title
+                    id="nk-1"
+                  >
+                    External link
+                  </title>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </a>
+           | 
+          <a
+            class="css-4d291v"
+            href="https://github.com/newscorp-ghfb/ncu-newskit"
+          >
+            <span
+              class="css-1togqc2"
+            >
+              <span
+                class="css-10uqmlk"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  NewsKit on GitHub
+                </span>
+              </span>
+              <span
+                class="css-10uqmlk"
+              >
+                <svg
+                  aria-labelledby="nk-2"
+                  class="css-1suiw6l"
+                  viewBox="0 0 24 24"
+                >
+                  <title
+                    id="nk-2"
+                  >
+                    External link
+                  </title>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </a>
+           | 
+          <a
+            class="css-4d291v"
+            href="https://github.com/lhaggar/newskit-demo"
+          >
+            <span
+              class="css-1togqc2"
+            >
+              <span
+                class="css-10uqmlk"
+              >
+                <span
+                  class="css-10xj0tt"
+                >
+                  This Demo on GitHub
+                </span>
+              </span>
+              <span
+                class="css-10uqmlk"
+              >
+                <svg
+                  aria-labelledby="nk-3"
+                  class="css-1suiw6l"
+                  viewBox="0 0 24 24"
+                >
+                  <title
+                    id="nk-3"
+                  >
+                    External link
+                  </title>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </a>
+        </p>
+      </footer>
+    </div>
+  </div>
+</DocumentFragment>
+`;

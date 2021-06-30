@@ -8,20 +8,19 @@ import {
   Grid,
   Cell,
   styled,
-  getBorderRadiusFromTheme,
-  getSpacingFromTheme,
-  getSpacingInsetFromTheme,
+  getBorderCssFromTheme,
+  getSpacingCssFromTheme
 } from 'newskit';
 import useThemeSwitcher from './use-theme-switcher';
 
 const HR = styled.hr`
   margin-top: 0;
-  margin-bottom: ${getSpacingFromTheme('space050')};
+  ${getSpacingCssFromTheme('marginBottom', 'space050')}
 `;
 
 const Container = styled.div`
-  border-radius: ${getBorderRadiusFromTheme('borderRadiusRounded010')};
-  ${getSpacingInsetFromTheme('spaceInset020')};
+  ${getBorderCssFromTheme('borderRadius', 'borderRadiusRounded010')}
+  ${getSpacingCssFromTheme('padding', 'spaceInset020')}
   overflow: hidden;
 `;
 
@@ -60,9 +59,9 @@ export default ({
 
   return (
     <Template title={title}>
-      <Block overrides={{ spaceInset: 'spaceInsetStretch020' }}>
+      <Block spaceInset='spaceInsetStretch020'>
         <Stack flow="horizontal-center" stackDistribution="space-between">
-          <Block overrides={{ soaceInset: 'spaceInsetStretch020' }}>
+          <Block spaceInset='spaceInsetStretch020'>
             <Heading2>{title}</Heading2>
           </Block>
           {showThemeSwitcher && themeSwitcher}

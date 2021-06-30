@@ -168,7 +168,7 @@ export default ({ title = 'NewsKit Demo', children }) => (
       `}
     />
     <ThemeProvider theme={theme}>
-      <Block overrides={{ spaceInset: 'spaceInset030' }}>{children}</Block>
+      <Block spaceInset="spaceInset030">{children}</Block>
     </ThemeProvider>
   </div>
 );

@@ -12,17 +12,17 @@ import { dependencies } from '../package.json';
 
 export default () => (
   <Template>
-    <Block overrides={{ spaceStack: 'space060' }}>
+    <Block spaceStack="space060">
       <H1>NewsKit Demo</H1>
     </Block>
-    <Block overrides={{ spaceStack: 'space050' }}>
+    <Block spaceStack="space050">
       <H2>v{dependencies.newskit}</H2>
     </Block>
-    <Block overrides={{ spaceStack: 'space040' }}>
+    <Block spaceStack="space040">
       <Divider />
     </Block>
     <H3 as="div">
-      <Block overrides={{ spaceStack: 'space050' }}>
+      <Block spaceStack='space050'>
         <Stack space="sizing030">
           <Link href="/page1">{page1Title}</Link>
           <Link href="/page2">{page2Title}</Link>
@@ -34,7 +34,7 @@ export default () => (
         </Stack>
       </Block>
     </H3>
-    <Block overrides={{ spaceStack: 'space050' }}>
+    <Block spaceStack='space050'>
       <Divider />
     </Block>
     <footer>

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Grid,
   Cell,
@@ -7,12 +6,9 @@ import {
   P,
   AudioPlayer,
   Block,
-  Global,
-  css,
   useTheme,
   Image,
   styled,
-  TextBlock,
   H2,
   Stack,
 } from 'newskit';
@@ -47,14 +43,14 @@ const PublicationName = () => {
 };
 
 const Content = () => (
-  <Block overrides={{ spaceStack: 'space050' }}>
+  <Block spaceStack='space050'>
     <Grid>
       <Cell xs={12} mdOffset={1} md={9}>
         <Grid>
           <Cell xs={12} md={9}>
             <Grid>
               <Cell xs={12}>
-                <Block overrides={{ spaceStack: 'space020' }}>
+                <Block spaceStack='space020'>
                   <TitleBar actionItem={() => null}>
                     <PublicationName /> Podcasts
                   </TitleBar>
@@ -73,7 +69,7 @@ const Content = () => (
                 </ImageContainer>
               </Cell>
               <Cell xs={12} md={9} lg={7}>
-                <Block overrides={{ spaceStack: 'space050' }}>
+                <Block spaceStack='space050'>
                   <H2>A Great Podcast</H2>
                 </Block>
                 <P>
@@ -98,7 +94,7 @@ const Content = () => (
           </Cell>
 
           <Cell xs={12}>
-            <Block overrides={{ spaceStack: 'space020' }}>
+            <Block spaceStack='space020'>
               <TitleBar
                 overrides={{
                   heading: {

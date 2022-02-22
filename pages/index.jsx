@@ -41,7 +41,7 @@ export default () => (
       <P>
         <Link href="https://newskit.co.uk/">newskit.co.uk</Link>
         {` | `}
-        <Link href="https://github.com/newscorp-ghfb/ncu-newskit">
+        <Link href="https://github.com/newscorp-ghfb/newskit">
           NewsKit on GitHub
         </Link>
         {` | `}

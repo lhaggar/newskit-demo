@@ -47,8 +47,8 @@ export default ({
         <Cell xsHidden smHidden md={6}>
           <Container>
             <Stack space="sizing030">
-              {codePaths.map((path) => (
-                <CodeFromFile path={path} />
+              {codePaths.map((path, i) => (
+                <CodeFromFile key={i} path={path} />
               ))}
             </Stack>
           </Container>

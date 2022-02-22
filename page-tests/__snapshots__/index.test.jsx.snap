@@ -199,7 +199,7 @@ exports[`Index Page should render as expected 1`] = `
            | 
           <a
             class="css-4d291v"
-            href="https://github.com/newscorp-ghfb/ncu-newskit"
+            href="https://github.com/newscorp-ghfb/newskit"
           >
             <span
               class="css-1togqc2"

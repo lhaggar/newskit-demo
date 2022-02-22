@@ -82,6 +82,7 @@ const Content = () => (
                 <AudioPlayer
                   src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
                   captionSrc=""
+                  popoutHref="/popout-player"
                 />
               </Cell>
             </Grid>

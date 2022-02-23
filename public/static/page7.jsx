@@ -1,7 +1,32 @@
-import { Block, Stack, Button, IconFilledExpandMore, TextBlock } from 'newskit';
+import {
+  Block,
+  Stack,
+  Button,
+  IconFilledExpandMore,
+  TextBlock,
+  styled,
+  getSpacingCssFromTheme,
+  getStylePresetFromTheme,
+  useTheme,
+} from 'newskit';
+
+const StyledContainer = styled.div`
+  ${getStylePresetFromTheme('pricingCardSurface')};
+  ${getSpacingCssFromTheme('padding', 'spaceInsetStretch040')}
+  max-width: 287px;
+`;
+
+const NoWrapButton = styled(Button)`
+  white-space: nowrap;
+`;
+
+const PublicationName = () => {
+  const theme = useTheme();
+  return theme.componentDefaults.publicationName || 'The NewsKit Daily';
+};
 
 export default () => (
-  <div>
+  <StyledContainer>
     <Block spaceStack="space040">
       <TextBlock
         as="h2"
@@ -13,7 +38,7 @@ export default () => (
     </Block>
     <Block spaceStack="space050">
       <TextBlock typographyPreset="utilityBody010" stylePreset="inkSubtle">
-        For those who want to read The Times &amp; The Sunday Times on the go.
+        For those who want to read <PublicationName /> on the go.
       </TextBlock>
     </Block>
     <Block spaceStack="space030">
@@ -36,11 +61,11 @@ export default () => (
       >
         Subscribe
       </Button>
-      <Button
+      <NoWrapButton
         overrides={{ width: '100%', stylePreset: 'buttonMinimalPrimary' }}
       >
         View Benefits <IconFilledExpandMore />
-      </Button>
+      </NoWrapButton>
     </Stack>
-  </div>
+  </StyledContainer>
 );

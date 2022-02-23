@@ -8,6 +8,7 @@ import { pageTitle as page5Title } from './page5';
 import { pageTitle as page6Title } from './page6';
 import { pageTitle as page7Title } from './page7';
 import { pageTitle as page8Title } from './page8';
+import { pageTitle as page9Title } from './page9';
 
 import { dependencies } from '../package.json';
 
@@ -33,6 +34,7 @@ export default () => (
           <LinkStandalone href="/page6">{page6Title}</LinkStandalone>
           <LinkStandalone href="/page7">{page7Title}</LinkStandalone>
           <LinkStandalone href="/page8">{page8Title}</LinkStandalone>
+          <LinkStandalone href="/page9">{page9Title}</LinkStandalone>
         </Stack>
       </Block>
     </H3>

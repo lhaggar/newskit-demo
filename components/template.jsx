@@ -15,7 +15,7 @@ const theme = createTheme({
 });
 
 export default ({ title = 'NewsKit Demo', children }) => (
-  <div>
+  <>
     <Head>
       <title>{title}</title>
       <link rel="icon" href="/favicon.ico" />
@@ -170,5 +170,5 @@ export default ({ title = 'NewsKit Demo', children }) => (
     <ThemeProvider theme={theme}>
       <Block spaceInset="spaceInset030">{children}</Block>
     </ThemeProvider>
-  </div>
+  </>
 );

@@ -1,4 +1,4 @@
-import { Block, H1, H2, H3, P, Stack, Link, Divider } from 'newskit';
+import { Block, H1, H2, H3, P, Stack, LinkStandalone, Divider } from 'newskit';
 import Template from '../components/template';
 import { pageTitle as page1Title } from './page1';
 import { pageTitle as page2Title } from './page2';
@@ -24,13 +24,13 @@ export default () => (
     <H3 as="div">
       <Block spaceStack='space050'>
         <Stack space="sizing030">
-          <Link href="/page1">{page1Title}</Link>
-          <Link href="/page2">{page2Title}</Link>
-          <Link href="/page3">{page3Title}</Link>
-          <Link href="/page4">{page4Title}</Link>
-          <Link href="/page5">{page5Title}</Link>
-          <Link href="/page6">{page6Title}</Link>
-          <Link href="/page7">{page7Title}</Link>
+          <LinkStandalone href="/page1">{page1Title}</LinkStandalone>
+          <LinkStandalone href="/page2">{page2Title}</LinkStandalone>
+          <LinkStandalone href="/page3">{page3Title}</LinkStandalone>
+          <LinkStandalone href="/page4">{page4Title}</LinkStandalone>
+          <LinkStandalone href="/page5">{page5Title}</LinkStandalone>
+          <LinkStandalone href="/page6">{page6Title}</LinkStandalone>
+          <LinkStandalone href="/page7">{page7Title}</LinkStandalone>
         </Stack>
       </Block>
     </H3>
@@ -39,15 +39,15 @@ export default () => (
     </Block>
     <footer>
       <P>
-        <Link href="https://newskit.co.uk/">newskit.co.uk</Link>
+        <LinkStandalone href="https://newskit.co.uk/">newskit.co.uk</LinkStandalone>
         {` | `}
-        <Link href="https://github.com/newscorp-ghfb/newskit">
+        <LinkStandalone href="https://github.com/newscorp-ghfb/newskit">
           NewsKit on GitHub
-        </Link>
+        </LinkStandalone>
         {` | `}
-        <Link href="https://github.com/lhaggar/newskit-demo">
+        <LinkStandalone href="https://github.com/lhaggar/newskit-demo">
           This Demo on GitHub
-        </Link>
+        </LinkStandalone>
       </P>
     </footer>
   </Template>

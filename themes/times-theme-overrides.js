@@ -528,8 +528,7 @@ export default {
         iconColor: '{{colors.inkBrand010}}',
       },
       hover: {
-        backgroundColor:
-          '{{stylePresets.audioPlayerControlButton.hover.backgroundColor}}',
+        backgroundColor: '{{colors.interactivePrimary010}}',
       },
     },
   },

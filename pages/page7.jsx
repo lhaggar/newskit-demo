@@ -112,8 +112,8 @@ const Content = () => (
             </Block>
           </Cell>
 
-          {[...cards, ...[...cards].reverse()].map(({ media, text }) => (
-            <Cell xs={12} sm={6} md={4} lg={3}>
+          {[...cards, ...[...cards].reverse()].map(({ media, text }, i) => (
+            <Cell xs={12} sm={6} md={4} lg={3} key={i}>
               <CardInset media={media}>
                 <P>{text}</P>
               </CardInset>

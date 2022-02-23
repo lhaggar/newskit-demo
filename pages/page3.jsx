@@ -1,7 +1,7 @@
 import CodeTemplate from '../components/code-template';
-import Page3 from '../public/static/page3';
+import Page3 from '../public/static/page4';
 
-export const pageTitle = 'Step 3: Layout';
+export const pageTitle = 'Step 3: Setting Type Presets';
 
 export default () => (
   <CodeTemplate

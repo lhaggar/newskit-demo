@@ -24,7 +24,7 @@ export const Code = ({ language = 'jsx', children }) => {
   );
 };
 
-export const CodeFromFile = ({ language, path }) => {
+export const CodeFromFile = ({ language = "js", path }) => {
   const [source, setSource] = useState('');
 
   useEffect(() => {

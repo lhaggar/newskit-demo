@@ -35,9 +35,9 @@ export default () => (
                 <Image
                   src="https://via.placeholder.com/300/011936/FFFFFF?text=A Great Presenter Image"
                   alt="A Great Presenter"
-                  maxWidth="300px"
                   overrides={{
                     stylePreset: 'audioPlayerImage',
+                    maxWidth: "300px",
                   }}
                 />
               </ImageContainer>

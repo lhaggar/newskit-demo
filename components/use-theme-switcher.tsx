@@ -6,20 +6,22 @@ import {
   styled,
   getStylePreset,
   getTypographyPreset,
-  getSpacingInset,
-  getColorFromTheme,
-  getMinHeight,
+  getResponsiveSpace,
+  UncompiledTheme,
+  ThemeOverrides,
+  getResponsiveSize,
+  getColorCssFromTheme,
 } from 'newskit';
 import useHasMounted from './use-has-mounted';
 import timesThemeOverrides from '../themes/times-theme-overrides';
 import sunThemeOverrides from '../themes/sun-theme-overrides';
 import virginThemeOverrides from '../themes/virgin-theme-overrides';
 
-const createOverrides = (customOverrides = {}) => {
+const createOverrides = (customOverrides: ThemeOverrides = {}) => {
   return {
     ...customOverrides,
     stylePresets: {
-      ...customOverrides.stylePresets,
+      ...('stylePresets' in customOverrides ? customOverrides.stylePresets! : {}),
       pricingCardSurface: {
         base: {
           backgroundColor: '{{colors.interfaceBackground}}',
@@ -31,13 +33,16 @@ const createOverrides = (customOverrides = {}) => {
 };
 
 const themes = [
-  [undefined, 'NewsKit Light'],
-  [newskitDarkTheme, 'NewsKit Dark'],
-  [undefined, 'The Times Theme', timesThemeOverrides],
-  [undefined, 'The Sun Theme', sunThemeOverrides],
-  [undefined, 'Virgin Radio Theme', virginThemeOverrides],
-].map(([baseTheme, name, overrides]) => {
-  const theme = createTheme({
+  ['NewsKit Light', undefined, {}],
+  ['NewsKit Dark', newskitDarkTheme, {}],
+  ['The Times Theme', undefined, timesThemeOverrides],
+  ['The Sun Theme', undefined, sunThemeOverrides],
+  ['Virgin Radio Theme', undefined, virginThemeOverrides],
+];
+
+const uncompiledThemes = themes.map(([name, baseTheme, overrides]: [string, UncompiledTheme | undefined, ThemeOverrides | undefined]) => {
+
+  const theme: UncompiledTheme = createTheme({
     name,
     baseTheme,
     overrides: createOverrides(overrides),
@@ -45,7 +50,7 @@ const themes = [
   // Bug in this NewsKit version keeps the name from base theme, so overwrite it here
   theme.name = name;
   return theme;
-});
+}) as UncompiledTheme[];
 
 // NewsKit has a text input field but no select (currently), we can use the same component defaults though!
 const StyledSelect = styled.select`
@@ -57,23 +62,23 @@ const StyledSelect = styled.select`
   margin-right: auto;
   ${getStylePreset(`textInput.medium.input`, 'input')};
   ${getTypographyPreset(`textInput.medium.input`, 'input', {
-    withCrop: true,
-  })};
-  ${getSpacingInset(`textInput.medium.input`, 'input')};
-  min-height: ${getMinHeight(`textInput.medium.input`, 'input')};
+  withCrop: true,
+})};
+  ${getResponsiveSpace('padding', 'textInput.medium.input', 'input', 'spaceInset')}
+  ${getResponsiveSize('minHeight', 'textInput.medium.input', 'input', 'minHeight')}
 `;
 
 const Container = styled.div`
-  background: ${getColorFromTheme('inverse')};
+  ${getColorCssFromTheme('backgroundColor', 'inverse')};
 `;
 
-export default () => {
+const useThemeSwitcher =  (): [null | JSX.Element, (() => any) | (({ children }: {children: any;}) => JSX.Element)] => {
   const mounted = useHasMounted();
 
   const [themeIndex, setThemeIndex] = useState(() => {
     const index =
       typeof window !== 'undefined'
-        ? window.localStorage.getItem('theme-index')
+        ? Number(window.localStorage.getItem('theme-index'))
         : 0;
     return Math.min(Math.max(index, 0), themes.length - 1);
   });
@@ -92,7 +97,8 @@ export default () => {
     return [null, () => null];
   }
 
-  const themeLabels = themes.map((theme) => theme.name);
+  const themeLabels = uncompiledThemes.map(theme => theme.name);
+
   return [
     <StyledSelect
       onChange={(event) => {
@@ -109,9 +115,11 @@ export default () => {
       })}
     </StyledSelect>,
     ({ children }) => (
-      <ThemeProvider theme={themes[themeIndex]}>
+      <ThemeProvider theme={uncompiledThemes[themeIndex]}>
         <Container>{children}</Container>
       </ThemeProvider>
     ),
   ];
 };
+
+export default useThemeSwitcher;

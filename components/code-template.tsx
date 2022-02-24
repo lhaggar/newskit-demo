@@ -24,15 +24,24 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
+interface CodeTemplateProps {
+  PageComponent: React.ElementType;
+  codePaths?: string[];
+  title: string;
+  nextPage?: string;
+  showThemeSwitcher?: boolean;
+
+}
+
 export default ({
   PageComponent,
   codePaths,
   title,
   nextPage,
-  showThemeSwitcher,
-}) => {
+  showThemeSwitcher = false,
+}: CodeTemplateProps) => {
   const hasCode = Boolean(codePaths && codePaths.length);
-  const [themeSwitcher, ThemeWrapper] = useThemeSwitcher();
+  const [themeSwitcher, ThemeWrapper]: [null | JSX.Element, (() => any) | (({ children }: {children: any;}) => JSX.Element)] = useThemeSwitcher();
 
   const Content = () => (
     <Grid>
@@ -46,7 +55,7 @@ export default ({
       {hasCode && (
         <Cell xsHidden smHidden md={6}>
           <Container>
-            <Stack space="sizing030">
+            <Stack spaceInline="space030">
               {codePaths.map((path, i) => (
                 <CodeFromFile key={i} path={path} />
               ))}
@@ -77,7 +86,7 @@ export default ({
         </Stack>
       </Block>
       <HR />
-      {showThemeSwitcher ? (
+      {(showThemeSwitcher && themeSwitcher) ? (
         <ThemeWrapper>
           <Content />
         </ThemeWrapper>

@@ -24,8 +24,8 @@ export default () => (
       <Divider />
     </Block>
     <H3 as="div">
-      <Block spaceStack='space050'>
-        <Stack space="sizing030">
+      <Block spaceStack="space050">
+        <Stack spaceInline="space020">
           <LinkStandalone href="/page1">{page1Title}</LinkStandalone>
           <LinkStandalone href="/page2">{page2Title}</LinkStandalone>
           <LinkStandalone href="/page3">{page3Title}</LinkStandalone>

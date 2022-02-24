@@ -6,12 +6,11 @@ import {
   styled,
   getStylePreset,
   getTypographyPreset,
-  getSpacingInset,
-  getColorFromTheme,
-  getMinHeight,
-  Theme,
+  getResponsiveSpace,
   UncompiledTheme,
   ThemeOverrides,
+  getResponsiveSize,
+  getColorCssFromTheme,
 } from 'newskit';
 import useHasMounted from './use-has-mounted';
 import timesThemeOverrides from '../themes/times-theme-overrides';
@@ -65,12 +64,12 @@ const StyledSelect = styled.select`
   ${getTypographyPreset(`textInput.medium.input`, 'input', {
   withCrop: true,
 })};
-  ${getSpacingInset(`textInput.medium.input`, 'input')};
-  min-height: ${getMinHeight(`textInput.medium.input`, 'input')};
+  ${getResponsiveSpace('padding', 'textInput.medium.input', 'input', 'spaceInset')}
+  ${getResponsiveSize('minHeight', 'textInput.medium.input', 'input', 'minHeight')}
 `;
 
 const Container = styled.div`
-  background: ${getColorFromTheme('inverse')};
+  ${getColorCssFromTheme('backgroundColor', 'inverse')};
 `;
 
 const useThemeSwitcher =  (): [null | JSX.Element, (() => any) | (({ children }: {children: any;}) => JSX.Element)] => {

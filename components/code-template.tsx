@@ -86,7 +86,7 @@ export default ({
         </Stack>
       </Block>
       <HR />
-      {(showThemeSwitcher && themeSwitcher) ? (
+      {showThemeSwitcher ? (
         <ThemeWrapper>
           <Content />
         </ThemeWrapper>

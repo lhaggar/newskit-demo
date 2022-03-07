@@ -8,6 +8,6 @@ export default () => (
     title={pageTitle}
     nextPage="page5"
     PageComponent={Page4}
-    codePaths={['page4.jsx']}
+    codePaths={['page4.tsx']}
   />
 );

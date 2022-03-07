@@ -1,5 +1,5 @@
 import CodeTemplate from '../components/code-template';
-import Page3 from '../public/static/page4';
+import Page3 from '../public/static/page3';
 
 export const pageTitle = 'Step 3: Setting Type Presets';
 

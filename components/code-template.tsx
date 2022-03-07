@@ -9,7 +9,8 @@ import {
   Cell,
   styled,
   getBorderCssFromTheme,
-  getSpacingCssFromTheme
+  getSpacingCssFromTheme,
+  P
 } from 'newskit';
 import useThemeSwitcher from './use-theme-switcher';
 
@@ -28,6 +29,7 @@ interface CodeTemplateProps {
   PageComponent: React.ElementType;
   codePaths?: string[];
   title: string;
+  description?: React.ReactNode;
   nextPage?: string;
   showThemeSwitcher?: boolean;
 
@@ -37,6 +39,7 @@ export default ({
   PageComponent,
   codePaths,
   title,
+  description,
   nextPage,
   showThemeSwitcher = false,
 }: CodeTemplateProps) => {
@@ -72,6 +75,7 @@ export default ({
         <Stack flow="horizontal-center" stackDistribution="space-between">
           <Block spaceInset='spaceInsetStretch020'>
             <Heading2>{title}</Heading2>
+            <P>{description}</P>
           </Block>
           {showThemeSwitcher && themeSwitcher}
           {nextPage ? (

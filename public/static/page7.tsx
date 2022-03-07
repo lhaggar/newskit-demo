@@ -14,6 +14,7 @@ const StyledContainer = styled.div`
   ${getStylePresetFromTheme('pricingCardSurface')};
   ${getSpacingCssFromTheme('padding', 'spaceInsetStretch040')}
   max-width: 287px;
+  width: 100%;
 `;
 
 const NoWrapButton = styled(Button)`

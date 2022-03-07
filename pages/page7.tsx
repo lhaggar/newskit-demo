@@ -8,7 +8,7 @@ export default () => (
     title={pageTitle}
     nextPage="page8"
     PageComponent={Page7}
-    codePaths={['page7.jsx']}
+    codePaths={['page7.tsx']}
     showThemeSwitcher
   />
 );

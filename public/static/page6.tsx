@@ -9,7 +9,7 @@ import {
   getStylePresetFromTheme,
   getSpacingCssFromTheme,
 } from 'newskit';
-import page5Theme from './page6-theme';
+import page6Theme from './page6-theme';
 
 const StyledContainer = styled.div`
   ${getStylePresetFromTheme('pricingCardSurface')}
@@ -25,7 +25,7 @@ const NoWrapButton = styled(Button)`
 `;
 
 export default () => (
-  <ThemeProvider theme={page5Theme}>
+  <ThemeProvider theme={page6Theme}>
     <StyledContainer>
       <Block spaceStack="space040">
         <TextBlock

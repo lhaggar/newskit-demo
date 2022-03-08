@@ -4,7 +4,7 @@ export default () => (
   <div>
     <Block spaceStack="space040">
       <TextBlock as="h2" typographyPreset="utilityHeading050">
-        Standard Digital bfsdmf
+        Standard Digital
       </TextBlock>
     </Block>
     <Block spaceStack="space050">

@@ -1,7 +1,7 @@
 import { createTheme } from 'newskit';
 
 export default createTheme({
-  name: 'page5-theme',
+  name: 'page6-theme',
   overrides: {
     stylePresets: {
       pricingCardSurface: {

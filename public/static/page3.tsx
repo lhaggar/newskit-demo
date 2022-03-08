@@ -3,7 +3,7 @@ import { Button, IconFilledExpandMore, TextBlock } from 'newskit';
 export default () => (
   <div>
     <TextBlock as="h2" typographyPreset="utilityHeading050">
-      Standard Digitallll
+      Standard Digital
     </TextBlock>
     <TextBlock typographyPreset="utilityBody010">
       For those who want to read The Times &amp; The Sunday Times on the go.

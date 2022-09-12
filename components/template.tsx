@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { createTheme, ThemeProvider, Global, css, Block } from 'newskit';
+import { createTheme, NewsKitProvider, Global, css, Block } from 'newskit';
 
 const theme = createTheme({
   overrides: {
@@ -100,7 +100,8 @@ export default ({ title = 'NewsKit Demo', children }) => (
         }
         @font-face {
           font-family: 'Poppins';
-          src: url('/fonts/poppins-extrabolditalic-webfont.woff2') format('woff2');
+          src: url('/fonts/poppins-extrabolditalic-webfont.woff2')
+            format('woff2');
           font-weight: 800;
           font-style: italic;
         }
@@ -148,7 +149,8 @@ export default ({ title = 'NewsKit Demo', children }) => (
         }
         @font-face {
           font-family: 'Poppins';
-          src: url('/fonts/poppins-semibolditalic-webfont.woff2') format('woff2');
+          src: url('/fonts/poppins-semibolditalic-webfont.woff2')
+            format('woff2');
           font-weight: 600;
           font-style: italic;
         }
@@ -212,15 +214,15 @@ export default ({ title = 'NewsKit Demo', children }) => (
           font-style: italic;
           font-weight: 700;
         }
-        
+
         body {
           margin: 0;
           padding: 0;
         }
       `}
     />
-    <ThemeProvider theme={theme}>
+    <NewsKitProvider theme={theme}>
       <Block spaceInset="spaceInset030">{children}</Block>
-    </ThemeProvider>
+    </NewsKitProvider>
   </>
 );

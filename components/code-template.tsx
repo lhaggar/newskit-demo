@@ -10,7 +10,7 @@ import {
   styled,
   getBorderCssFromTheme,
   getSpacingCssFromTheme,
-  P
+  P,
 } from 'newskit';
 import useThemeSwitcher from './use-theme-switcher';
 
@@ -31,8 +31,8 @@ interface CodeTemplateProps {
   title: string;
   description?: React.ReactNode;
   nextPage?: string;
+  prevPage?: string;
   showThemeSwitcher?: boolean;
-
 }
 
 export default ({
@@ -41,10 +41,14 @@ export default ({
   title,
   description,
   nextPage,
+  prevPage,
   showThemeSwitcher = false,
 }: CodeTemplateProps) => {
   const hasCode = Boolean(codePaths && codePaths.length);
-  const [themeSwitcher, ThemeWrapper]: [null | JSX.Element, (() => any) | (({ children }: {children: any;}) => JSX.Element)] = useThemeSwitcher();
+  const [themeSwitcher, ThemeWrapper]: [
+    null | JSX.Element,
+    (() => any) | (({ children }: { children: any }) => JSX.Element)
+  ] = useThemeSwitcher();
 
   const Content = () => (
     <Grid>
@@ -71,22 +75,33 @@ export default ({
 
   return (
     <Template title={title}>
-      <Block spaceInset='spaceInsetStretch020'>
+      <Block spaceInset="spaceInsetStretch020">
         <Stack flow="horizontal-center" stackDistribution="space-between">
-          <Block spaceInset='spaceInsetStretch020'>
+          <Block spaceInset="spaceInsetStretch020">
             <Heading2>{title}</Heading2>
             <P>{description}</P>
           </Block>
           {showThemeSwitcher && themeSwitcher}
-          {nextPage ? (
-            <Tag href={`/${nextPage}`} size="large">
-              Next Step 👉
-            </Tag>
-          ) : (
-            <Tag href="/" size="large">
-              Home 🏡
-            </Tag>
-          )}
+          <Block>
+            {prevPage && (
+              <Tag
+                href={`/${prevPage}`}
+                size="large"
+                overrides={{ marginInlineEnd: 'space040' }}
+              >
+                👈 Previous Step
+              </Tag>
+            )}
+            {nextPage ? (
+              <Tag href={`/${nextPage}`} size="large">
+                Next Step 👉
+              </Tag>
+            ) : (
+              <Tag href="/" size="large">
+                Home 🏡
+              </Tag>
+            )}
+          </Block>
         </Stack>
       </Block>
       <HR />

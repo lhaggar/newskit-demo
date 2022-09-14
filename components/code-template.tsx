@@ -12,6 +12,7 @@ import {
   getSpacingCssFromTheme,
   P,
 } from 'newskit';
+import LinkNext from 'next/link';
 import useThemeSwitcher from './use-theme-switcher';
 
 const HR = styled.hr`
@@ -84,18 +85,22 @@ export default ({
           {showThemeSwitcher && themeSwitcher}
           <Block>
             {prevPage && (
-              <Tag
-                href={`/${prevPage}`}
-                size="large"
-                overrides={{ marginInlineEnd: 'space040' }}
-              >
-                👈 Previous Step
-              </Tag>
+              <LinkNext href={`/${prevPage}`}>
+                <Tag
+                  href={`/${prevPage}`}
+                  size="large"
+                  overrides={{ marginInlineEnd: 'space040' }}
+                >
+                  👈 Previous Step
+                </Tag>
+              </LinkNext>
             )}
             {nextPage ? (
-              <Tag href={`/${nextPage}`} size="large">
-                Next Step 👉
-              </Tag>
+              <LinkNext href={`/${nextPage}`}>
+                <Tag href={`/${nextPage}`} size="large">
+                  Next Step 👉
+                </Tag>
+              </LinkNext>
             ) : (
               <Tag href="/" size="large">
                 Home 🏡

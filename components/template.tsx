@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { createTheme, NewsKitProvider, Global, css, Block } from 'newskit';
+import { createTheme, ThemeProvider, Global, css, Block } from 'newskit';
 
 const theme = createTheme({
   overrides: {
@@ -221,8 +221,8 @@ export default ({ title = 'NewsKit Demo', children }) => (
         }
       `}
     />
-    <NewsKitProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <Block spaceInset="spaceInset030">{children}</Block>
-    </NewsKitProvider>
+    </ThemeProvider>
   </>
 );

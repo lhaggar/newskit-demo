@@ -7,6 +7,7 @@ export default () => (
   <CodeTemplate
     title={pageTitle}
     nextPage="page4"
+    prevPage="page2"
     PageComponent={Page3}
     codePaths={['page3.tsx']}
   />

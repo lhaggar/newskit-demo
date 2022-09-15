@@ -10,7 +10,7 @@ import { pageTitle as page7Title } from './page7';
 import { pageTitle as page8Title } from './page8';
 import { pageTitle as page9Title } from './page9';
 
-import { dependencies } from '../package.json';
+import packageJson from '../package.json';
 
 export default () => (
   <Template>
@@ -18,7 +18,7 @@ export default () => (
       <H1>NewsKit Demo</H1>
     </Block>
     <Block spaceStack="space050">
-      <H2>v{dependencies.newskit}</H2>
+      <H2>v{packageJson.dependencies.newskit}</H2>
     </Block>
     <Block spaceStack="space040">
       <Divider />
@@ -38,12 +38,14 @@ export default () => (
         </Stack>
       </Block>
     </H3>
-    <Block spaceStack='space050'>
+    <Block spaceStack="space050">
       <Divider />
     </Block>
     <footer>
       <P>
-        <LinkStandalone href="https://newskit.co.uk/">newskit.co.uk</LinkStandalone>
+        <LinkStandalone href="https://newskit.co.uk/">
+          newskit.co.uk
+        </LinkStandalone>
         {` | `}
         <LinkStandalone href="https://github.com/newscorp-ghfb/newskit">
           NewsKit on GitHub

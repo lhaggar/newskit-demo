@@ -43,14 +43,14 @@ const PublicationName = () => {
 };
 
 const Content = () => (
-  <Block spaceStack='space050'>
+  <Block marginBlockEnd="space050">
     <Grid>
       <Cell xs={12} mdOffset={1} md={9}>
         <Grid>
           <Cell xs={12} md={9}>
             <Grid>
               <Cell xs={12}>
-                <Block spaceStack='space020'>
+                <Block marginBlockEnd="space020">
                   <TitleBar actionItem={() => null}>
                     <PublicationName /> Podcasts
                   </TitleBar>
@@ -63,13 +63,13 @@ const Content = () => (
                     alt="A Great Presenter"
                     overrides={{
                       stylePreset: 'audioPlayerImage',
-                      maxWidth: "300px",
+                      maxWidth: '300px',
                     }}
                   />
                 </ImageContainer>
               </Cell>
               <Cell xs={12} md={9} lg={7}>
-                <Block spaceStack='space050'>
+                <Block marginBlockEnd="space050">
                   <H2>A Great Podcast</H2>
                 </Block>
                 <P>
@@ -95,7 +95,7 @@ const Content = () => (
           </Cell>
 
           <Cell xs={12}>
-            <Block spaceStack='space020'>
+            <Block marginBlockEnd="space020">
               <TitleBar
                 overrides={{
                   heading: {
@@ -126,5 +126,11 @@ const Content = () => (
 );
 
 export default () => (
-  <CodeTemplate title={pageTitle} nextPage="page9" PageComponent={Content} showThemeSwitcher />
+  <CodeTemplate
+    title={pageTitle}
+    nextPage="page9"
+    prevPage="page7"
+    PageComponent={Content}
+    showThemeSwitcher
+  />
 );

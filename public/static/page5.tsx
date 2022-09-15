@@ -1,35 +1,40 @@
-import { Block, Stack, Button, IconFilledExpandMore, TextBlock } from 'newskit';
+import { Stack, Button, toNewsKitIcon, TextBlock } from 'newskit';
+import { ExpandMore } from '@emotion-icons/material';
+
+const IconFilledExpandMore = toNewsKitIcon(ExpandMore);
 
 export default () => (
   <div>
-    <Block spaceStack="space040">
-      <TextBlock
-        as="h2"
-        typographyPreset="utilityHeading050"
-        stylePreset="inkContrast"
-      >
-        Standard Digital
-      </TextBlock>
-    </Block>
-    <Block spaceStack="space050">
-      <TextBlock typographyPreset="utilityBody010" stylePreset="inkSubtle">
-        For those who want to read The Times &amp; The Sunday Times on the go.
-      </TextBlock>
-    </Block>
-    <Block spaceStack="space030">
-      <TextBlock
-        as="h3"
-        typographyPreset="utilityHeading050"
-        stylePreset="inkContrast"
-      >
-        £15.00
-      </TextBlock>
-    </Block>
-    <Block spaceStack="space040">
-      <TextBlock typographyPreset="utilityLabel030" stylePreset="inkSubtle">
-        a month, monthly rolling contract.
-      </TextBlock>
-    </Block>
+    <TextBlock
+      as="h2"
+      typographyPreset="utilityHeading050"
+      marginBlockEnd="space040"
+      stylePreset="inkContrast"
+    >
+      Standard Digital
+    </TextBlock>
+    <TextBlock
+      typographyPreset="utilityBody010"
+      marginBlockEnd="space050"
+      stylePreset="inkSubtle"
+    >
+      For those who want to read The Times &amp; The Sunday Times on the go.
+    </TextBlock>
+    <TextBlock
+      as="h3"
+      typographyPreset="utilityHeading050"
+      marginBlockEnd="space030"
+      stylePreset="inkContrast"
+    >
+      £15.00
+    </TextBlock>
+    <TextBlock
+      typographyPreset="utilityLabel030"
+      marginBlockEnd="space040"
+      stylePreset="inkSubtle"
+    >
+      a month, monthly rolling contract.
+    </TextBlock>
     <Stack flow="horizontal-top" stackDistribution="space-between">
       <Button
         overrides={{ width: '100%', stylePreset: 'buttonOutlinedPrimary' }}

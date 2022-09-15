@@ -1,4 +1,7 @@
-import { Button, IconFilledExpandMore, TextBlock } from 'newskit';
+import { Button, TextBlock, toNewsKitIcon } from 'newskit';
+import { ExpandMore } from '@emotion-icons/material';
+
+const IconFilledExpandMore = toNewsKitIcon(ExpandMore);
 
 export default () => (
   <div>

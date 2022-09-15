@@ -7,6 +7,7 @@ export default () => (
   <CodeTemplate
     title={pageTitle}
     nextPage="page8"
+    prevPage="page6"
     PageComponent={Page7}
     codePaths={['page7.tsx']}
     showThemeSwitcher

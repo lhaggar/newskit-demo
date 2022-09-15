@@ -8,7 +8,6 @@ import CodeTemplate from '../components/code-template';
 
 export const pageTitle = 'Theme Checker';
 
-
 const MainContainer = styled.div`
   width: 100%;
   ${getSpacingCssFromTheme('padding', 'spaceInset020')}
@@ -17,11 +16,15 @@ const MainContainer = styled.div`
 
 const Content = () => (
   <MainContainer>
-      <ThemeChecker />
+    <ThemeChecker />
   </MainContainer>
 );
 
 export default () => (
-  <CodeTemplate title={pageTitle} PageComponent={Content} showThemeSwitcher />
+  <CodeTemplate
+    title={pageTitle}
+    prevPage="page8"
+    PageComponent={Content}
+    showThemeSwitcher
+  />
 );
-

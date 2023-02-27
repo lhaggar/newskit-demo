@@ -143,13 +143,17 @@ export default {
   },
   fonts: {
     fontFamily010: {
-      fontFamily: 'GillSansMTStdMedium',
-      cropConfig: {
-        top: 8,
-        bottom: 14,
+      fontFamily: 'Roboto',
+      fontMetrics: {
+        fontWeight010: {
+          capHeight: 1456,
+          ascent: 1900,
+          descent: -500,
+          lineGap: 0,
+          unitsPerEm: 2048,
+        },
       },
     },
-
     fontFamily020: {
       fontFamily: 'TimesDigitalRegular',
       cropConfig: {

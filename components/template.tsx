@@ -33,8 +33,8 @@ export default ({ title = 'NewsKit Demo', children }) => (
           font-style: bold;
         }
         @font-face {
-          font-family: 'GillSansMTStdMedium';
-          src: url('/fonts/GillSansMTStd-Medium.woff2') format('woff2');
+          font-family: 'Roboto';
+          src: url('/fonts/Roboto-Medium.woff2') format('woff2');
           font-style: normal;
         }
 
